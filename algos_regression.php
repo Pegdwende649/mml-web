@@ -108,9 +108,9 @@ header {
                                   <img src="https://miro.medium.com/max/2956/1*eRAF9Y5tCwb1uvpoEiMT9A.gif" width="150" height="150" /> 
                  
                                   <div class="mt-3">
-                                    <h3 class="text-secondary mb-1">CNN Algorithm</h3>
-                                    <p class="text-muted font-size-sm">Used for images processing</p>
-                                    <button>Click to choose</button>
+                                    <h3 class="text-secondary mb-1">CNN</h3>
+                                    <p class="text-muted font-size-sm">Images processing</p>
+                                    <input type="button" onclick="location.href='datasets.php';" value="Go!" />
 
                                   </div> 
 
@@ -129,9 +129,9 @@ header {
                                     <img src="https://miro.medium.com/max/2956/1*eRAF9Y5tCwb1uvpoEiMT9A.gif" width="150" height="150" /> 
                
                                     <div class="mt-3">
-                                       <h3 class="text-secondary mb-1">CNN Algorithm</h3>
-                                       <p class="text-muted font-size-sm">Used for images processing</p>
-                                       <button>Click to choose</button>
+                                       <h3 class="text-secondary mb-1">CNN</h3>
+                                       <p class="text-muted font-size-sm">Images processing</p>
+                                    <input type="button" onclick="location.href='datasets.php';" value="Go!" />
               
                                     </div>
                                 </div>
@@ -150,9 +150,9 @@ header {
                                   <img src="https://miro.medium.com/max/2956/1*eRAF9Y5tCwb1uvpoEiMT9A.gif" width="150" height="150" /> 
              
                                   <div class="mt-3">
-                                     <h3 class="text-secondary mb-1">CNN Algorithm</h3>
-                                     <p class="text-muted font-size-sm">Used for images processing</p>
-                                     <button>Click to choose</button>
+                                     <h3 class="text-secondary mb-1">ANN</h3>
+                                     <p class="text-muted font-size-sm">Neural networks</p>
+                                    <input type="button" onclick="location.href='datasets.php';" value="Go!" />
 
             
                                   </div>

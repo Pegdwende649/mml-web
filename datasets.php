@@ -11,6 +11,7 @@
       <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
       <script src="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
       <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 
 
       <meta charset="UTF-8">
@@ -71,19 +72,14 @@
 <body>
  
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-light ">
-  <a class="navbar-brand" href="#">
-    <img src="images/deep.png" class="d-inline-block align-top" alt="" loading="lazy">
-  </a>
-      
-  <ul class="nav justify-content-end">
-        <li class="nav-item active">
-          <a class="nav-link" href="Accueil.php">Home</span></a>
-        </li>
-        <!-- Slide One - Set the background image for this slide in the line below -->
-  </ul>
 
-</nav>
+<header>
+   <?php
+      include('entete.php');
+      ?>
+</header>
+
+
 
   <div class="carousel-item active" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),  url('https://www.getsmarter.com/disk/public/sBBGDTboLgihDAZHFNC7aFHj/mit_sloan_csail_machine_learning_course_page_large_header_banner.jpg')">
 
@@ -98,14 +94,18 @@
 
             <div><h1> Select a <span>dataset</span></h1></div>
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Click to select
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href='index_profile.php'>Modifier mon profil</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="essai_paypal.php">Mon abonnement</a>
+
+
+
+            <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Click to select
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href='mml_form.php'>iris</a>
+                      <a class="dropdown-item" href="mml_form.php">kyphosis</a>
+            </div>
+       
                 </div>
               </li>
             </div>

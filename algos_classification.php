@@ -4,15 +4,12 @@
    <head>
 
 
-      <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="icon" type="image/png" href="images/deep1.png" />
       <link href="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
       <meta charset="utf-8">
       <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
       <script src="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
       <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-
-
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -108,9 +105,9 @@ header {
                                   <img src="https://miro.medium.com/max/2956/1*eRAF9Y5tCwb1uvpoEiMT9A.gif" width="150" height="150" /> 
                  
                                   <div class="mt-3">
-                                    <h3 class="text-secondary mb-1">CNN Algorithm</h3>
-                                    <p class="text-muted font-size-sm">Used for images processing</p>
-                                    <button>Click to choose</button>
+                                    <h3 class="text-secondary mb-1">CART</h3>
+                                    <p class="text-muted font-size-sm">Classication and Regression</p>
+                                    <input type="button" onclick="location.href='datasets.php';" value="Go!" />
 
                                   </div> 
 
@@ -129,9 +126,9 @@ header {
                                     <img src="https://miro.medium.com/max/2956/1*eRAF9Y5tCwb1uvpoEiMT9A.gif" width="150" height="150" /> 
                
                                     <div class="mt-3">
-                                       <h3 class="text-secondary mb-1">CNN Algorithm</h3>
-                                       <p class="text-muted font-size-sm">Used for images processing</p>
-                                       <button>Click to choose</button>
+                                       <h3 class="text-secondary mb-1">CNN</h3>
+                                       <p class="text-muted font-size-sm">Images Classification</p>
+                                    <input type="button" onclick="location.href='datasets.php';" value="Go!" />
               
                                     </div>
                                 </div>
@@ -150,9 +147,9 @@ header {
                                   <img src="https://miro.medium.com/max/2956/1*eRAF9Y5tCwb1uvpoEiMT9A.gif" width="150" height="150" /> 
              
                                   <div class="mt-3">
-                                     <h3 class="text-secondary mb-1">CNN Algorithm</h3>
-                                     <p class="text-muted font-size-sm">Used for images processing</p>
-                                     <button>Click to choose</button>
+                                     <h3 class="text-secondary mb-1">SVM</h3>
+                                     <p class="text-muted font-size-sm">Classification and Regression</p>
+                                    <input type="button" onclick="location.href='datasets.php';" value="Go!" />
 
             
                                   </div>
