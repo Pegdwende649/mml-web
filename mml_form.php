@@ -141,7 +141,9 @@ td#parametres a { text-decoration:none;}
   <body>
 <div>
          <header>
-
+   <?php
+	  	include('entete.php');
+      ?>
 </header>
          <div class="content">
 

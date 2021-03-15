@@ -83,20 +83,12 @@ header {
 
  <body>
  
+          <header>
+   <?php
+      include('entete.php');
+      ?>
+</header>
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-light ">
-  <a class="navbar-brand" href="#">
-    <img src="images/deep.png" class="d-inline-block align-top" alt="" loading="lazy">
-  </a>
-      
-  <ul class="nav justify-content-end">
-        <li class="nav-item active">
-          <a class="nav-link" href="Accueil.php">Home</span></a>
-        </li>
-        <!-- Slide One - Set the background image for this slide in the line below -->
-  </ul>
-
-</nav>
 
   <div class="carousel-item active" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),  url('https://www.getsmarter.com/disk/public/sBBGDTboLgihDAZHFNC7aFHj/mit_sloan_csail_machine_learning_course_page_large_header_banner.jpg')">
 

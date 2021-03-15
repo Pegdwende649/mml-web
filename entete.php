@@ -72,7 +72,7 @@ font-weight: lighter;
         <a class="nav-link" href="Accueil.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Algorithme</a>
+        <a class="nav-link" href="#">Multi Machine Learning</a>
       </li>
     <form class="form-inline my-2 my-lg-0">
 		<li>
