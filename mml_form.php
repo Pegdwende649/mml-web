@@ -36,17 +36,22 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
-<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<link rel="stylesheet" href="style_profile.css">
-<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-<link rel="icon" type="image/png" href="images/deep1.png" />
-<link href="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-<meta charset="utf-8">
-<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
+
+
+
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" type="image/png" href="images/deep1.png" />
+      <link href="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+      <meta charset="utf-8">
+      <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <script src="//netdna.bootstrapcdn.com/bootstrap/4.1.1-beta/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+
 <style>
 
 
@@ -152,7 +157,7 @@ td#parametres a { text-decoration:none;}
           <!-- Breadcrumb -->
           <nav aria-label="breadcrumb" class="main-breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">Dataset: ... </a></li>
+              <li class="breadcrumb-item"><a href="index.html">CNN for Classification</a></li>
               
             </ol>
           </nav>
@@ -164,23 +169,57 @@ td#parametres a { text-decoration:none;}
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
 
-  <img src="images/cnn.png" /> 
+  <img src="images/data-set-icon-3.jpg" width="350" height="200"/> 
    
                  <div class="mt-3">
-                      <h3>CNN for classification</h3>
-                             <div class="form-group">
+                      <h3>Dataset :
 
+<?php
+if(isset($_POST['send']))
+{
+$val = $_POST["dataset"];
+echo $val;
+}
+?>
+                      <?php
+$dir    = './datasets';
+$files1 = scandir($dir,1);
+?>
+                      </h3>
+                             <div class="form-group">
+<hr>
       <h4 class="text-secondary">SEPARATOR</h4>
 
-          <label class="d-block">
-          <input type="radio" class="mr-1" name="gender"> ,
-          </label>
-          <label class="d-block">
-          <input type="radio" class="mr-1" name="gender"> ;
-          </label>
-          <label class="d-block">
-          <input type="radio" class="mr-1" name="gender"> ' '
-          </label>
+
+<form action="mml_form.php" method="post">
+<div class="radios" >
+
+<div class="form-check">
+  <input value  = "coma" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <label class="form-check-label" for="flexRadioDefault1">
+    <h5 class="mb-0">Coma
+</h5>
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+  <label class="form-check-label" for="flexRadioDefault2">
+    <h5 class="mb-0">Semi colon
+</h5>
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+  <label class="form-check-label" for="flexRadioDefault2">
+   <h5 class="mb-0">Tabulation
+</h5> 
+  </label>
+</div>
+<hr>
+<div>
+    <button type="submit">Envoyer</button>
+  </div>
+</div>  
         </div>
                       
 	
@@ -192,116 +231,216 @@ td#parametres a { text-decoration:none;}
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                         
-<button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          select predictive variables 
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">PYTHON</a>
-    <a class="dropdown-item" href="#">R</a>
-    <a class="dropdown-item" href="#">JULIA</a>
-  </div>                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-<button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          select target variable
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">PYTHON</a>
-    <a class="dropdown-item" href="#">R</a>
-    <a class="dropdown-item" href="#">JULIA</a>
-  </div>
-                  </li>
+
+
+            <div class="nb_rows">
+            <h5 class="mb-0">Number of rows : </h5>
+            
+            </div>
+          </li>
+       
+ <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                        
+
+
+            <div class="nb_vars">
+            <h5 class="mb-0">Number of variables : 
+
+
+<?php
+                            if(isset($_POST['send']))
+                            {
+                            $val = $_POST["dataset"];
+                            $dataset = $val;
+                            $sep = $_POST["radios"];
+                            }
+
+                            if (($handle = fopen("datasets/".$dataset, "r")) !== FALSE) {
+                                $data = fgetcsv($handle, 100, ",");
+                                $num = count($data);
+                                echo $num;
+
+                                 fclose($handle);
+                            }
+                          ?>
+
+
+            </h5>
+
+
+          
+            
+            </div>
+          </li>
+                  
+
+
+            
                   
                 </ul>
               </div>
             </div>
+
+
             <div class="col-md-8">
               <div class="card mb-3">
                 <div class="card-body">
+
+
+                  
+                  <div class="row">  
+
+                    <div class="col-sm-9">
+                      <h6 class="mb-0"> Select target variable </h6>
+                    </div>
+
+                    <div class="col-sm-0 text-secondary">
+                         <div class="dropdown">
+                        <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              Click to select
+                        </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+<?php
+                            if(isset($_POST['send']))
+                            {
+                            $val = $_POST["dataset"];
+                            $dataset = $val;
+                            }
+
+                            if (($handle = fopen("datasets/".$dataset, "r")) !== FALSE) {
+                                $data = fgetcsv($handle, 100, ",");
+                                    foreach ($data as $key => $value) {
+                                        echo "<a class=\"dropdown-item\" href=\"essai_paypal.php\">$value</a>";
+
+                                    }
+                                 fclose($handle);
+                            }
+                          ?>
+                          
+                      </div>
+  
+                        
+                     </div>
+                   </div>
+
+                   </div>
+                   <hr>
+
+
+
+                  <div class="row">  
+
+                    <div class="col-sm-9">
+                      <h6 class="mb-0"> Select predictive variables </h6>
+                    </div>
+
+                    <div class="col-sm-0 text-secondary">
+                         <div class="dropdown">
+                        <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              Click to select
+                        </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                           <?php
+                            if(isset($_POST['send']))
+                            {
+                            $val = $_POST["dataset"];
+                            $dataset = $val;
+                            }
+
+                            if (($handle = fopen("datasets/".$dataset, "r")) !== FALSE) {
+                                $data = fgetcsv($handle, 100, ",");
+                                    foreach ($data as $key => $value) {
+                                        echo "<a class=\"dropdown-item\" href=\"essai_paypal.php\">$value</a>";
+
+                                    }
+                                 fclose($handle);
+                            }
+                          ?>
+                          
+                      </div>
+                      </div>
+  
+                        
+                     </div>
+                   </div>
+
+                   </div>
+                   <hr>
+
+
                   <div class="row">
     
 
-                    <ul class="list-group list-group-flush">                
-
-  
-
-                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-
-
-                    <div class="row">
-
                       <div class="col-sm-9">
-                      <h6 class="mb-0">Target Language</h6>
-                    <div class="col-sm-3 text-secondary">
+                         <h6 class="mb-0">Target Language</h6>
+                      </div>
+                         <div class="col-sm-0 text-secondary">
 
-                        <div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Click to select
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">PYTHON</a>
-    <a class="dropdown-item" href="#">R</a>
-    <a class="dropdown-item" href="#">JULIA</a>
-  </div>
+                         <div class="dropdown">
+                           <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Click to select
+                           </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">PYTHON</a>
+                            <a class="dropdown-item" href="#">R</a>
+                            <a class="dropdown-item" href="#">JULIA</a>
+                          </div>
 
-</div>
+                         </div>
 
-  </div>
-</li>
+                         </div>
+
+                      </div>
+                      <hr>
                   
-<li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-  
+                  
+                  <div class="row">  
 
-                    <div class="col-sm-3">
+                    <div class="col-sm-9">
                       <h6 class="mb-0">Metrics</h6>
                     </div>
 
-                    <div class="col-sm-9 text-secondary">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Click to select
+                    <div class="col-sm-0 text-secondary">
+                         <div class="dropdown">
+                        <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              Click to select
                         </button>
-  
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                           <a class="dropdown-item" href="essai_paypal.php">ACCURACY</a>
                           <a class="dropdown-item" href='index_profile.php'>PRECISION</a>
                           <a class="dropdown-item" href='index_profile.php'>RECALL</a>
                           <a class="dropdown-item" href='index_profile.php'>F1-SCORE</a>
 
-                          <div class="dropdown-divider"></div>
-                        </div>
-                    </div>
+                      </div>
+  
+                        
+                     </div>
+                   </div>
 
-</li>
+                   </div>
+                   <hr>
 
-<li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-  <div class="row">
-                    <div class="col-sm-3">
+
+                    <div class="row">
+                    <div class="col-sm-9">
                       <h6 class="mb-0">Train size</h6>
                     </div>
-<div class="row">
-  </div><!-- /.col-lg-6 -->
-  <div class="col-lg-6">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder=0.3>
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->
+                  <div class="col-sm-0 text-secondary">
 
-</li>
-
-		
-                    
-              </div>
-              
-                </div>
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder=0.3>
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Go!</button>
+                      </span>
+                    </div><!-- /input-group -->
+                  </div><!-- /.col-lg-6 -->
+                     </div><!-- /.row -->
+                   </div> 
               </div>
             </div>
-          </div>
-        </div>
-    </div>
-</div>
+
+              
+                
   </body>
 </html>
 

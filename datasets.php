@@ -84,57 +84,59 @@
   <div class="carousel-item active" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),  url('https://www.getsmarter.com/disk/public/sBBGDTboLgihDAZHFNC7aFHj/mit_sloan_csail_machine_learning_course_page_large_header_banner.jpg')">
 
     <div class="select-algo-class">
-      
-      <form method="post" enctype="multipart/form-data">
-
-          <div class="row gutters-sm">  
-
-            <div class="col-md-4 mb-3">
+        <div class="row gutters-sm">  
+          <div class="col-md-4 mb-3">
             <div class="col-sm-20">
+              <div><h1> Select a <span>dataset</span></h1></div>
+                  <form action="mml_form.php" method="post">
+                    <div class="dropdown" >
 
-            <div><h1> Select a <span>dataset</span></h1></div>
+
+                     <select class="form-control" name="dataset">
+                      <?php
+                      $dir    = './datasets';
+                      $files1 = scandir($dir,2);
 
 
+                      $display = "";
+                      foreach ($files1 as $key => $val) {
+
+                          if ($val!="." && $val !="..")
+                            {$display= $display." <option Value = $val> $val</option> "; }
+                               }
+
+                      echo $display;
+                      echo $a;
+                      ?>
+                    </select>
+                  </div>
+                  <input type="submit" name ="send"/>
+
+                </form>
 
 
-            <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Click to select
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href='mml_form.php'>iris</a>
-                      <a class="dropdown-item" href="mml_form.php">kyphosis</a>
-            </div>
-       
-                </div>
-              </li>
-            </div>
+            </div>       
           </div>
+        
 
-            <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3">
             <div class="col-sm-20">
-                      <div><h1> Import a <span>dataset</span></h1></div>
-          <form method="post" enctype="multipart/form-data">
-             <input name="lien" type="file" size="30" id="lien"/>
-          </form>
+                <div><h1> Import a <span>dataset</span></h1></div>
+                  <form method="post" enctype="multipart/form-data">
+                   <input name="lien" type="file" size="30" id="lien"/>
+                  </form>
             
             </div>
           </div>
 
 
-          </div>
 
-      </form>
-      
-          
+      </div>
+    </div>
 
-
-
-     </div>
+</div>
 
 
-
-  </div>
 
 </body>
 </html>
