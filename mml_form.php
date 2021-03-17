@@ -157,7 +157,7 @@ td#parametres a { text-decoration:none;}
           <!-- Breadcrumb -->
           <nav aria-label="breadcrumb" class="main-breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">CNN for Classification</a></li>
+              <li class="breadcrumb-item"><a href="index.html">MA BASE DE DONNEE</a></li>
               
             </ol>
           </nav>
@@ -430,11 +430,11 @@ $files1 = scandir($dir,1);
                     <div class="input-group">
                       <input type="text" class="form-control" placeholder=0.3>
                       <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">Go!</button>
                       </span>
                     </div><!-- /input-group -->
                   </div><!-- /.col-lg-6 -->
                      </div><!-- /.row -->
+<a class="btn btn-success" href="http://localhost:4567" role="button">Cliquez ici pour continuer</a>
                    </div> 
               </div>
             </div>

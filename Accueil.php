@@ -54,7 +54,7 @@ background-size: cover;
 <div class="welcome-text">
         <h1>
 We are <span>Creative</span></h1>
-<a href="#">Contact US</a>
+<a href="mailto:davidoubda@gmail.com">Contact US</a>
     </div>
         </div>
       </div>
@@ -64,7 +64,7 @@ We are <span>Creative</span></h1>
          <div class="welcome-text">
         <h1>
 we make you <span>visible</span></h1>
-<a href="#">Contact US</a>
+<a href="mailto:calebcarloss@gmail.com">Contact US</a>
     </div>
         </div>
       </div>
@@ -74,7 +74,7 @@ we make you <span>visible</span></h1>
          <div class="welcome-text">
         <h1>
 we're at your <span>service</span></h1>
-<a href="#">Contact US</a>
+<a href="mailto:calebcarloss@gmail.com">Contact US</a>
     </div>
         </div>
       </div>
